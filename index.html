@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/Logo.jpg" />
+    <title>Einstein Club | Future University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- <style>
+        
+    </style> -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <header>
+        <!-- <div class="logo">
+            <img src="https://th.bing.com/th/id/OIP.r65k1jG05Er0ebCwbDA1fQAAAA?rs=1&pid=ImgDetMain" alt="Future University Logo">
+        </div> -->
+        <div class="container">
+            <div class="logo">Einstein Club</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#cover">Home</a></li>
+                <li><a href="#members">Our Team</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#registration-form">Register</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <section id="cover" class="cover">
+        <video autoplay muted loop playsinline class="cover-video" id="mobile-video">
+            <source src="images/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="cover-content">
+            <h1>Welcome to Einstein Club</h1>
+            <p>Unleashing the power of curiosity and innovation at Future University</p>
+            <p>NH-24 Delhi Lucknow Highway, Near Faridpur, Future University Bareilly</p>
+        </div>
+    
+        <div class="about-content">
+            <h2 class="glow">About the Einstein Club</h2>
+            <p>
+                The Einstein Club at <strong>Future University, Bareilly</strong>, is a vibrant hub for students passionate about science, technology, engineering, and mathematics. Inspired by the genius of Albert Einstein, the club aims to spark creativity, critical thinking, and innovation.
+              </p>
+              <p>
+                Through engaging <strong>events, workshops, and discussions</strong>, the club provides students with opportunities to explore groundbreaking ideas, collaborate with peers, and apply their knowledge to real-world challenges.
+              </p>
+              <p>
+                Whether you're a curious learner or a seasoned enthusiast, the Einstein Club welcomes you to join our journey of discovery and invention.
+              </p>
+        </div>
+    </section>
+    
+    
+    <section id="members" class="members" style="background: url('images/bg1.jpg') #030728 no-repeat center center; background-size: cover;">
+        <div class="intro-container">
+            <!-- <div class="intro-bg"></div> -->
+            <h1 class="intro">
+                Meet the Brilliant minds of our Club
+            </h1>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const introText = document.querySelector(".intro");
+        
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("visible");
+                            }
+                        });
+                    }, { threshold: 0.5 });
+        
+                    observer.observe(introText);
+                });
+            </script>
+        </div>
+        
+        <div class="container swiper">
+            <div class="slider-wrapper">
+              <div class="card-list swiper-wrapper">
+                <div class="card-item swiper-slide">
+                  <img src="images/img-1.jpg" alt="User Image" class="user-image">
+                  <h2 class="user-name">Vaishnavi Dixit</h2>
+<p class="user-profession">President</p>
+<button class="message-button" id="connect-vaishnavi">Connect</button>
+<script>
+    document.getElementById("connect-vaishnavi").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/vaishnavi-d-628888212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "_blank"
+        );
+    });
+</script>
+                </div>
+                <div class="card-item swiper-slide">
+                  <img src="images/img-2.jpg" alt="User Image" class="user-image">
+                  <h2 class="user-name">Adarsh Gupta</h2>
+<p class="user-profession">Vice President</p>
+<button class="message-button" id="connect-adarsh">Connect</button>
+<script>
+    document.getElementById("connect-adarsh").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/-adarshgupta14?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "_blank"
+        );
+    });
+</script>
+                </div>
+                <div class="card-item swiper-slide">
+                  <img src="images/img-3.jpg" alt="User Image" class="user-image">
+                  <h2 class="user-name">Harshit Dhoni</h2>
+                  <p class="user-profession">Secretory</p>
+                  <button class="message-button" id="connect-harshit">Connect</button>
+<script>
+    document.getElementById("connect-harshit").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/harshitdhoni",
+            "_blank"
+        );
+    });
+</script>
+                </div>
+                <div class="card-item swiper-slide">
+                  <img src="images/img-4.PNG" alt="User Image" class="user-image">
+                  <h2 class="user-name">Anuj Kashyap</h2>
+                  <p class="user-profession">Joint Secretory</p>
+                  <button class="message-button" id="connect-anuj">Connect</button>
+<script>
+    document.getElementById("connect-anuj").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+               </div>
+                <div class="card-item swiper-slide">
+                  <img src="images/img-5.jpg" alt="User Image" class="user-image">
+                  <h2 class="user-name">Muskan Kashyap</h2>
+                  <p class="user-profession">Treasuer</p>
+                  <button class="message-button" id="connect-muskan">Connect</button>
+<script>
+    document.getElementById("connect-muskan").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                </div>
+                <div class="card-item swiper-slide">
+                  <img src="images/img-6.jpg" alt="User Image" class="user-image">
+                  <h2 class="user-name">Raghav Mishra</h2>
+                  <p class="user-profession">Hybrid Developer</p>
+                  <button class="message-button" id="connect-raghav">Connect</button>
+<script>
+    document.getElementById("connect-raghav").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/raghav-mishra-46051830b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            "_blank"
+        );
+    });
+</script>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/img-7.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Shresth</h2>
+                    <p class="user-profession">Cross-Platform Navigator</p>
+                    <button class="message-button" id="connect-shresth">Connect</button>
+<script>
+    document.getElementById("connect-shresth").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/shresth-saxena-911691296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/img-8.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Sunny Yadav</h2>
+                    <p class="user-profession">Code Ace</p>
+                    <button class="message-button" id="connect-sunny">Connect</button>
+<script>
+    document.getElementById("connect-sunny").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-9.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Abhinav Tripathi</h2>
+                    <p class="user-profession">Innovation Architect</p>
+                    <button class="message-button" id="connect-abhinav">Connect</button>
+<script>
+    document.getElementById("connect-abhinav").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/abhinav-tripathi-a02b16334/",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-10.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Krish Khandelwal</h2>
+                    <p class="user-profession">Tech Support Enthusiast</p>
+                    <button class="message-button" id="connect-krish">Connect</button>
+<script>
+    document.getElementById("connect-krish").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-11.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Rupesh Sharma</h2>
+                    <p class="user-profession">Tech Enthusiast</p>
+                    <button class="message-button" id="connect-rupesh">Connect</button>
+<script>
+    document.getElementById("connect-rupesh").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/rupesh-sharma-b6475929b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-12.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Abhishek Mishra</h2>
+                    <p class="user-profession">Code Commander</p>
+                    <button class="message-button" id="connect-abhishek">Connect</button>
+<script>
+    document.getElementById("connect-abhishek").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/abhishek-mishra-521b91328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-13.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Abhishesk Mourya</h2>
+                    <p class="user-profession">Data Wrangler</p>
+                    <button class="message-button" id="connect-abhishekM">Connect</button>
+<script>
+    document.getElementById("connect-abhishekM").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-14.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Aniket Chauhan</h2>
+                    <p class="user-profession">Design Virtuoso</p>
+                    <button class="message-button" id="connect-aniket">Connect</button>
+<script>
+    document.getElementById("connect-aniket").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-15.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Md. Atif</h2>
+                    <p class="user-profession">
+                        Design Enthusiast TSP
+                    </p>
+                    <button class="message-button" id="connect-atif">Connect</button>
+<script>
+    document.getElementById("connect-atif").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-16.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Utkarsh Vishwakarma</h2>
+                    <p class="user-profession">Animation Adept</p>
+                    <button class="message-button" id="connect-utkarsh">Connect</button>
+<script>
+    document.getElementById("connect-utkarsh").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-17.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Deekshant Gangwar</h2>
+                    <p class="user-profession">Visual Visionary</p>
+                    <button class="message-button" id="connect-deekshant">Connect</button>
+<script>
+    document.getElementById("connect-deekshant").addEventListener("click", () => {
+        window.open(
+            "https://www.linkedin.com/in/deekshant-gangwar-72a41333a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-18.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Ashish Saxena</h2>
+                    <p class="user-profession">Interactive Innovator</p>
+                    <button class="message-button" id="connect-ashish">Connect</button>
+<script>
+    document.getElementById("connect-ashish").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-19.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Nikhil</h2>
+                    <p class="user-profession">Concept Creator</p>
+                    <button class="message-button" id="connect-nikhil">Connect</button>
+<script>
+    document.getElementById("connect-nikhil").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+                  <div class="card-item swiper-slide">
+                    <img src="images/img-20.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Krishna</h2>
+                    <p class="user-profession">Concept Creator</p>
+                    <button class="message-button" id="connect-krishna">Connect</button>
+<script>
+    document.getElementById("connect-krishna").addEventListener("click", () => {
+        window.open(
+            "#",
+            "_blank"
+        );
+    });
+</script>
+                  </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+          </div>
+          <!-- Linking SwiperJS script -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          
+    </section>
+    <hr class="divider">
+    <section id="events" class="events">
+        <h2>Events</h2>
+        <div class="events-content">
+            <div class="slider">
+                <div class="slides">
+                  <!-- Each slide with image and description -->
+                  <div class="slide">
+                    <img src="images/debate arena.jpg" alt="Image 1">
+                    <p class="description">Intellectual debate competition on current topics.</p>
+                  </div>
+                  <div class="slide">
+                    <img src="images/garena lg.jpg" alt="Image 2">
+                    <p class="description">Competitive esports tournament featuring BGMI and Free Fire.</p>
+                  </div>
+                  <div class="slide">
+                    <img src="images/smart_wyze.jpg" alt="Image 3">
+                    <p class="description">Fast-paced quiz testing general knowledge.</p>
+                  </div>
+                  <div class="slide">
+                    <img src="images/techno byte.png" alt="Image 4">
+                    <p class="description">Tech event focused on coding and innovation.</p>
+                  </div>
+                </div>
+              </div>
+              <script>
+                const slides = document.querySelector('.slides');
+const slideCount = document.querySelectorAll('.slide').length;
+let currentIndex = 0;
+
+// Function to update the slide position
+function updateSliderPosition() {
+  const slideWidth = slides.children[0].clientWidth;
+  slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// Auto-slide every 3 seconds
+let autoSlideInterval = setInterval(() => {
+  if (currentIndex < slideCount - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0; // Loop back to the first image
+  }
+  updateSliderPosition();
+}, 3000); // Change 3000 to adjust the interval in milliseconds (3000ms = 3 seconds)
+
+// Next and previous button functionality
+document.querySelector('.slider-button.next').addEventListener('click', () => {
+  clearInterval(autoSlideInterval); // Stop auto-sliding when user manually clicks
+  if (currentIndex < slideCount - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateSliderPosition();
+  restartAutoSlide();
+});
+
+document.querySelector('.slider-button.prev').addEventListener('click', () => {
+  clearInterval(autoSlideInterval); // Stop auto-sliding when user manually clicks
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = slideCount - 1;
+  }
+  updateSliderPosition();
+  restartAutoSlide();
+});
+
+// Function to restart auto-slide after manual interaction
+function restartAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    if (currentIndex < slideCount - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateSliderPosition();
+  }, 3000);
+}
+
+
+              </script>
+              <hr class="divider">
+                <form id="registration-form">
+                  <h4>Register for an Event</h4>
+                  
+                  <label for="event">Select Event:</label>
+                  <select id="event" name="event" required>
+                      <option value="hackathon">Hackathon 2025</option>
+                      <option value="ai-seminar">AI Seminar</option>
+                  </select>
+                  
+                  <label for="department">Department:</label>
+                  <input type="text" name="department" id="department" placeholder="Enter your department" required />
+                  
+                  <label for="name">Name:</label>
+                  <input type="text" name="name" id="name" required>
+                  
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="email" required>
+                  
+                  <label for="phone">Phone:</label>
+                  <input type="tel" name="phone" id="phone" required>
+                  
+                  <button type="submit">Register</button>
+              </form>
+              
+                <button id="view-participants-btn">View Participants</button>
+                <div class="download-btn-container">
+                    
+                <div id="participants-list">
+                    <h4>Participants</h4>
+                    <table id="participants-table">
+                        <thead>  
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Event</th>
+                                <th>Program</th>
+                                <th>Department</th>
+                            </tr>
+                        </thead>
+                        <tbody id="participants">
+                            <!-- Participants will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <button id="downloadTableCsvBtn">Download File</button>
+                </div>
+                <script>
+                document.getElementById('downloadTableCsvBtn').addEventListener('click', function () {
+                    const table = document.getElementById('participants-table');
+                    const rows = table.querySelectorAll('tr');
+                    
+                    let csvContent = 'data:text/csv;charset=utf-8,';
+                    
+                    rows.forEach(row => {
+                        const cols = row.querySelectorAll('td, th');
+                        const rowData = Array.from(cols).map(col => col.textContent || col.innerText).join(',');
+                        csvContent += rowData + '\n';
+                    });
+                    
+                    // Create a link element and trigger the download
+                    const link = document.createElement('a');
+                    link.setAttribute('href', encodeURI(csvContent));
+                    link.setAttribute('download', 'participants_table.csv');
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+                </script>
+            </div>
+        </div>
+    </section>
+    <hr class="divider">
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formsubmit.co/techclub.einstein@gmail.com" method="POST">
+        <!-- <form action="mailto:techclub.einstein@gmail.com" method="POST" enctype="text/plain"> -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="message">Feedback/Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+    </section>
+    <script>
+       document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Einstein Club | Future University | Developed By Raghav Mishra</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- For database -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+        
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCrL75HGXFSklX3mVeCUQWL1-o_Q-LEPvA",
+            authDomain: "einstien-club.firebaseapp.com",
+            databaseURL: "https://einstien-club-default-rtdb.firebaseio.com",
+            projectId: "einstien-club",
+            storageBucket: "einstien-club.firebasestorage.app",
+            messagingSenderId: "1027434745642",
+            appId: "1:1027434745642:web:2b000f059136368df75853",
+            measurementId: "G-M5SJREW15V",
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        
+        // Handle form submission
+        const form = document.getElementById("registration-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+        
+            const data = {
+                event: form.event.value,
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                department: form.department.value,
+                timestamp: new Date().toISOString(),
+            };
+        
+            try {
+                await push(ref(database, "registrations"), data);
+                alert("Registration successful!");
+                form.reset();
+            } catch (error) {
+                console.error("Error saving data:", error);
+                alert("There was an error submitting your registration.");
+            }
+        });
+
+        // Function to view participants and toggle button
+        const viewParticipantsBtn = document.getElementById('view-participants-btn');
+        const participantsList = document.getElementById('participants-list');
+        const participantsTbody = document.getElementById('participants');
+    
+viewParticipantsBtn.addEventListener("click", async () => {
+    const eventRegistrationsRef = ref(database, `registrations`);
+
+    if (participantsList.style.display === "none") {
+        try {
+            const snapshot = await get(eventRegistrationsRef);
+            if (snapshot.exists()) {
+                const participants = snapshot.val();
+                participantsTbody.innerHTML = ""; // Clear previous rows
+
+                let hasParticipants = false;
+
+                for (let key in participants) {
+                    const { name, email, event, program, department } = participants[key];
+
+                    const row = document.createElement("tr");
+                    const nameCell = document.createElement("td");
+                    const emailCell = document.createElement("td");
+                    const eventCell = document.createElement("td");
+                    const programCell = document.createElement("td");
+                    const departmentCell = document.createElement("td");
+
+                    nameCell.textContent = name || "N/A";
+                    emailCell.textContent = email || "N/A";
+                    eventCell.textContent = event || "N/A";
+                    programCell.textContent = program || "N/A";
+                    departmentCell.textContent = department || "N/A";
+
+                    row.appendChild(nameCell);
+                    row.appendChild(emailCell);
+                    row.appendChild(eventCell);
+                    row.appendChild(programCell);
+                    row.appendChild(departmentCell);
+                    participantsTbody.appendChild(row);
+
+                    hasParticipants = true;
+                }
+
+                if (!hasParticipants) {
+                    alert("No participants found.");
+                } else {
+                    participantsList.style.display = "block";
+                    viewParticipantsBtn.textContent = "Close List";
+                }
+            } else {
+                alert("No participants found.");
+            }
+        } catch (error) {
+            console.error("Error fetching participants:", error);
+            alert("There was an error fetching participants.");
+        }
+    } else {
+        participantsList.style.display = "none";
+        viewParticipantsBtn.textContent = "View Participants";
+    }
+});
+
+
+const mobileMenu = document.getElementById("mobile-menu");
+const navList = document.querySelector(".nav-list");
+
+mobileMenu.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
+const swiper = new Swiper('.slider-wrapper', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 30,
+
+  // Pagination bullets
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    }
+  }
+});
+
+    </script>
+</body>
+</html>
