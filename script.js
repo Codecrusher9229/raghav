@@ -14,8 +14,8 @@
 // };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+// const app = initializeApp(firebaseConfig);
+// const database = getDatabase(app);
 
 // Handle form submission
 // const form = document.getElementById("registration-form");
