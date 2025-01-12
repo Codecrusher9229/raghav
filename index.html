@@ -575,111 +575,112 @@ function restartAutoSlide() {
     </footer>
 
     <script src="script.js"></script> <!-- For database -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-        import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+<!--   Form register     -->
+    <script type="module">  
+//         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+//         import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
         
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyCrL75HGXFSklX3mVeCUQWL1-o_Q-LEPvA",
-            authDomain: "einstien-club.firebaseapp.com",
-            databaseURL: "https://einstien-club-default-rtdb.firebaseio.com",
-            projectId: "einstien-club",
-            storageBucket: "einstien-club.firebasestorage.app",
-            messagingSenderId: "1027434745642",
-            appId: "1:1027434745642:web:2b000f059136368df75853",
-            measurementId: "G-M5SJREW15V",
-        };
+//         // Firebase configuration
+//         const firebaseConfig = {
+//             apiKey: "AIzaSyCrL75HGXFSklX3mVeCUQWL1-o_Q-LEPvA",
+//             authDomain: "einstien-club.firebaseapp.com",
+//             databaseURL: "https://einstien-club-default-rtdb.firebaseio.com",
+//             projectId: "einstien-club",
+//             storageBucket: "einstien-club.firebasestorage.app",
+//             messagingSenderId: "1027434745642",
+//             appId: "1:1027434745642:web:2b000f059136368df75853",
+//             measurementId: "G-M5SJREW15V",
+//         };
         
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
+//         // Initialize Firebase
+//         const app = initializeApp(firebaseConfig);
+//         const database = getDatabase(app);
         
-        // Handle form submission
-        const form = document.getElementById("registration-form");
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
+//         // Handle form submission
+//         const form = document.getElementById("registration-form");
+//         form.addEventListener("submit", async (e) => {
+//             e.preventDefault();
         
-            const data = {
-                event: form.event.value,
-                name: form.name.value,
-                email: form.email.value,
-                phone: form.phone.value,
-                department: form.department.value,
-                timestamp: new Date().toISOString(),
-            };
+//             const data = {
+//                 event: form.event.value,
+//                 name: form.name.value,
+//                 email: form.email.value,
+//                 phone: form.phone.value,
+//                 department: form.department.value,
+//                 timestamp: new Date().toISOString(),
+//             };
         
-            try {
-                await push(ref(database, "registrations"), data);
-                alert("Registration successful!");
-                form.reset();
-            } catch (error) {
-                console.error("Error saving data:", error);
-                alert("There was an error submitting your registration.");
-            }
-        });
+//             try {
+//                 await push(ref(database, "registrations"), data);
+//                 alert("Registration successful!");
+//                 form.reset();
+//             } catch (error) {
+//                 console.error("Error saving data:", error);
+//                 alert("There was an error submitting your registration.");
+//             }
+//         });
 
-        // Function to view participants and toggle button
-        const viewParticipantsBtn = document.getElementById('view-participants-btn');
-        const participantsList = document.getElementById('participants-list');
-        const participantsTbody = document.getElementById('participants');
+//         // Function to view participants and toggle button
+//         const viewParticipantsBtn = document.getElementById('view-participants-btn');
+//         const participantsList = document.getElementById('participants-list');
+//         const participantsTbody = document.getElementById('participants');
     
-viewParticipantsBtn.addEventListener("click", async () => {
-    const eventRegistrationsRef = ref(database, `registrations`);
+// viewParticipantsBtn.addEventListener("click", async () => {
+//     const eventRegistrationsRef = ref(database, `registrations`);
 
-    if (participantsList.style.display === "none") {
-        try {
-            const snapshot = await get(eventRegistrationsRef);
-            if (snapshot.exists()) {
-                const participants = snapshot.val();
-                participantsTbody.innerHTML = ""; // Clear previous rows
+//     if (participantsList.style.display === "none") {
+//         try {
+//             const snapshot = await get(eventRegistrationsRef);
+//             if (snapshot.exists()) {
+//                 const participants = snapshot.val();
+//                 participantsTbody.innerHTML = ""; // Clear previous rows
 
-                let hasParticipants = false;
+//                 let hasParticipants = false;
 
-                for (let key in participants) {
-                    const { name, email, event, program, department } = participants[key];
+//                 for (let key in participants) {
+//                     const { name, email, event, program, department } = participants[key];
 
-                    const row = document.createElement("tr");
-                    const nameCell = document.createElement("td");
-                    const emailCell = document.createElement("td");
-                    const eventCell = document.createElement("td");
-                    const programCell = document.createElement("td");
-                    const departmentCell = document.createElement("td");
+//                     const row = document.createElement("tr");
+//                     const nameCell = document.createElement("td");
+//                     const emailCell = document.createElement("td");
+//                     const eventCell = document.createElement("td");
+//                     const programCell = document.createElement("td");
+//                     const departmentCell = document.createElement("td");
 
-                    nameCell.textContent = name || "N/A";
-                    emailCell.textContent = email || "N/A";
-                    eventCell.textContent = event || "N/A";
-                    programCell.textContent = program || "N/A";
-                    departmentCell.textContent = department || "N/A";
+//                     nameCell.textContent = name || "N/A";
+//                     emailCell.textContent = email || "N/A";
+//                     eventCell.textContent = event || "N/A";
+//                     programCell.textContent = program || "N/A";
+//                     departmentCell.textContent = department || "N/A";
 
-                    row.appendChild(nameCell);
-                    row.appendChild(emailCell);
-                    row.appendChild(eventCell);
-                    row.appendChild(programCell);
-                    row.appendChild(departmentCell);
-                    participantsTbody.appendChild(row);
+//                     row.appendChild(nameCell);
+//                     row.appendChild(emailCell);
+//                     row.appendChild(eventCell);
+//                     row.appendChild(programCell);
+//                     row.appendChild(departmentCell);
+//                     participantsTbody.appendChild(row);
 
-                    hasParticipants = true;
-                }
+//                     hasParticipants = true;
+//                 }
 
-                if (!hasParticipants) {
-                    alert("No participants found.");
-                } else {
-                    participantsList.style.display = "block";
-                    viewParticipantsBtn.textContent = "Close List";
-                }
-            } else {
-                alert("No participants found.");
-            }
-        } catch (error) {
-            console.error("Error fetching participants:", error);
-            alert("There was an error fetching participants.");
-        }
-    } else {
-        participantsList.style.display = "none";
-        viewParticipantsBtn.textContent = "View Participants";
-    }
-});
+//                 if (!hasParticipants) {
+//                     alert("No participants found.");
+//                 } else {
+//                     participantsList.style.display = "block";
+//                     viewParticipantsBtn.textContent = "Close List";
+//                 }
+//             } else {
+//                 alert("No participants found.");
+//             }
+//         } catch (error) {
+//             console.error("Error fetching participants:", error);
+//             alert("There was an error fetching participants.");
+//         }
+//     } else {
+//         participantsList.style.display = "none";
+//         viewParticipantsBtn.textContent = "View Participants";
+//     }
+// });
 
 
 const mobileMenu = document.getElementById("mobile-menu");
