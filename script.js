@@ -1,5 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+// import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 // Firebase configuration
 // const firebaseConfig = {
@@ -18,27 +18,27 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 // Handle form submission
-const form = document.getElementById("registration-form");
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+// const form = document.getElementById("registration-form");
+// form.addEventListener("submit", async (e) => {
+//     e.preventDefault();
 
-    const data = {
-        event: form.event.value,
-        program: form.program.value, // Include selected program
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        department: form.department.value, 
-        timestamp: new Date().toISOString(),
-    };
+//     const data = {
+//         event: form.event.value,
+//         program: form.program.value, // Include selected program
+//         name: form.name.value,
+//         email: form.email.value,
+//         phone: form.phone.value,
+//         department: form.department.value, 
+//         timestamp: new Date().toISOString(),
+//     };
     
 
-    try {
-        await push(ref(database, "registrations"), data);
-        alert("Registration successful!");
-        form.reset();
-    } catch (error) {
-        console.error("Error saving data:", error);
-        alert("There was an error submitting your registration.");
-    }
-});
+//     try {
+//         await push(ref(database, "registrations"), data);
+//         alert("Registration successful!");
+//         form.reset();
+//     } catch (error) {
+//         console.error("Error saving data:", error);
+//         alert("There was an error submitting your registration.");
+//     }
+// });
