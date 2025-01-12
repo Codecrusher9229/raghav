@@ -2,16 +2,16 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 // Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyCrL75HGXFSklX3mVeCUQWL1-o_Q-LEPvA",
-    authDomain: "einstien-club.firebaseapp.com",
-    databaseURL: "https://einstien-club-default-rtdb.firebaseio.com",
-    projectId: "einstien-club",
-    storageBucket: "einstien-club.firebasestorage.app",
-    messagingSenderId: "1027434745642",
-    appId: "1:1027434745642:web:2b000f059136368df75853",
-    measurementId: "G-M5SJREW15V",
-};
+// const firebaseConfig = {
+//     apiKey: "AIzaSyCrL75HGXFSklX3mVeCUQWL1-o_Q-LEPvA",
+//     authDomain: "einstien-club.firebaseapp.com",
+//     databaseURL: "https://einstien-club-default-rtdb.firebaseio.com",
+//     projectId: "einstien-club",
+//     storageBucket: "einstien-club.firebasestorage.app",
+//     messagingSenderId: "1027434745642",
+//     appId: "1:1027434745642:web:2b000f059136368df75853",
+//     measurementId: "G-M5SJREW15V",
+// };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
