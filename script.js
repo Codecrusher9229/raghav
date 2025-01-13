@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
-Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCrL75HGXFSklX3mVeCUQWL1-o_Q-LEPvA",
     authDomain: "einstien-club.firebaseapp.com",
@@ -13,11 +13,11 @@ const firebaseConfig = {
     measurementId: "G-M5SJREW15V",
 };
 
-Initialize Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-Handle form submission
+// Handle form submission
 const form = document.getElementById("registration-form");
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -42,3 +42,4 @@ form.addEventListener("submit", async (e) => {
         alert("There was an error submitting your registration.");
     }
 });
+
